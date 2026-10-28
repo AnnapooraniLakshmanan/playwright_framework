@@ -1,0 +1,42 @@
+{"validuser":{
+    "username": "Admin",
+    "password": "admin123"},
+"invaliduser":{
+    "username": "Lord",
+    "password": "hope123"},
+"validemp": "Peter Kamau Munene",
+"invalidemp":"ZZZNoEmployee999",
+"empid":"11725",
+"firstname":"Saraswathi_",
+"lastname":"Murugan",
+"username":"Murugs_",
+"password":"Ohmmuruga@0606",
+
+"applyleave":{
+    "empname":"Per Anders Bakke",
+    "fromdate":"2026-20-10",
+    "todate":"2026-30-10"
+    
+},
+
+"addcandidate":{"fn":"Saroja",
+"ln":"G",
+"email":"abcde@gmail.com",
+"contact":"9786543210"
+
+},
+
+"viewEmpDts":{"eidd":"0303",
+"fn":"siva",
+"ln":"selvi"
+
+},
+
+"empattn":{"ename":"Linda  Anderson"},
+
+"invalidempattn":{"ename":"ZZZ_InvalidEmployee_999"},
+
+"job":{"jobb":"QA Engineer"}
+}
+
+
