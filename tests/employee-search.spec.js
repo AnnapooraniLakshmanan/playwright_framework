@@ -45,7 +45,7 @@ test("emp search using empid",async({page})=>{
    
 })
 
-test.only("view personal details",async({page})=>{
+test("view personal details",async({page})=>{
     test.slow()
     const ep = new EmployeeListPage(page)
     await ep.viewEmployeeDetails(data.viewEmpDts.eidd,data.viewEmpDts.fn,data.viewEmpDts.ln)

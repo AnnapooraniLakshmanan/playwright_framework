@@ -19,7 +19,7 @@ test.describe("attendance",()=>{
 
     })
 
-    test.only("Invalidemp-attendance",async({page})=>{
+    test("Invalidemp-attendance",async({page})=>{
         const tp=new TimePage(page)
         await tp.invalidEmpAttendance(data.invalidempattn.ename)
 

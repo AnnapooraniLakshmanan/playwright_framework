@@ -18,7 +18,7 @@ test.describe("login",()=>{
             await expect(page.getByText("Invalid credentials")).toBeVisible()
  })
 
- test.only("missing credentials",async({page,loginpage})=>{
+ test("missing credentials",async({page,loginpage})=>{
             await loginpage.login("","")
             await expect(page.getByText("Required").first()).toBeVisible()
  })

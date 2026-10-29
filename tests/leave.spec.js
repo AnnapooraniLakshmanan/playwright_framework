@@ -12,7 +12,7 @@ test.describe("leave",()=>{
         await logoutpage.logout()
     })
 
-    test.only("apply-leave",async({page})=>{
+    test("apply-leave",async({page})=>{
         let lp=new LeavePage(page)
         await lp.applyLeave(data.applyleave.empname,data.applyleave.fromdate,data.applyleave.todate)
         

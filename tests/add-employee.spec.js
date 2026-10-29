@@ -21,7 +21,7 @@ test("addEmpWithMissingCredentials",async({page})=>{
 })
           
 
-test.only("addEmpWithValidCredentials",async({page})=>{
+test("addEmpWithValidCredentials",async({page})=>{
           test.slow()
           const ap = new AddEmployeePage(page)
           const rndm = Math.round(Math.random()*((200-100)+100)+1)
