@@ -9,7 +9,7 @@ loginpage:async({page},use)=>{
 const loginpage = new LoginPage(page)
 const logoutpage=new LogoutPage(page)
 await loginpage.navigate()
-await loginpage.login(data.validuser.username,data.validuser.password)
+await loginpage.validlogin()
 await use(loginpage)
 await logoutpage.logout()
 }

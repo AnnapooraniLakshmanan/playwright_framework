@@ -35,6 +35,7 @@ test("emp search using empid",async({page})=>{
 
 test("view personal details",async({page})=>{
     test.slow()
+    await page.goto(`${process.env.BASE_URL}`+'/web/index.php/auth/login')
     const ep = new EmployeeListPage(page)
     await ep.viewEmployeeDetails(data.viewEmpDts.eidd,data.viewEmpDts.fn,data.viewEmpDts.ln)
    

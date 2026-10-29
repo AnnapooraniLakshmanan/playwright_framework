@@ -11,10 +11,20 @@ export class LoginPage
 
     async navigate()
     {
-        await this.page.goto('/web/index.php/auth/login')
+        await this.page.goto(`${process.env.BASE_URL}`+'/web/index.php/auth/login')
     }
 
-    async login(un,pwd)
+    async validlogin()
+    {
+        
+        await this.username.fill(`${process.env.ORANGEHRM_USERNAME}`)
+        await this.password.fill(`${process.env.ORANGEHRM_PASSWORD}`)
+        await this.loginbtn.click()
+       
+
+    }
+
+    async invalidlogin(un,pwd)
     {
         
         await this.username.fill(un)

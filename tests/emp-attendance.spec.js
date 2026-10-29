@@ -4,13 +4,15 @@ import TimePage from "../PageObjectModel/TimePage.js"
 
 
 
-    test("emp-attendance",async({page,loginpage})=>{
+    test("emp-attendance",async({page})=>{
+        await page.goto(`${process.env.BASE_URL}`+'/web/index.php/auth/login')
         const tp=new TimePage(page)
         await tp.empAttendance(data.empattn.ename)
 
     })
 
-    test("Invalidemp-attendance",async({page,loginpage})=>{
+    test("Invalidemp-attendance",async({page})=>{
+        await page.goto(`${process.env.BASE_URL}`+'/web/index.php/auth/login')
         const tp=new TimePage(page)
         await tp.invalidEmpAttendance(data.invalidempattn.ename)
 

@@ -5,7 +5,8 @@ import EmployeeListPage from "../PageObjectModel/EmployeeListPage.js"
 
 
 
-    test("system testing",async({page,loginpage})=>{
+    test("system testing",async({page})=>{
+        await page.goto(`${process.env.BASE_URL}`+'/web/index.php/auth/login')
         await expect(page).toHaveURL(/dashboard/)
         const ap = new AddEmployeePage(page)
         const rndm = Math.round(Math.random()*((200-100)+100)+1)
