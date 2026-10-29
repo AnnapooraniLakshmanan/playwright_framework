@@ -3,18 +3,6 @@ import EmployeeListPage from "../PageObjectModel/EmployeeListPage.js"
 import AddEmployeePage from "../PageObjectModel/AddEmployeePage.js"
 import data from "../test-data/users.json"
 
-test.describe("search-emp",()=>{
-
-    test.beforeEach(async({loginpage})=>{
-          await loginpage.navigate()
-          await loginpage.login(data.validuser.username,data.validuser.password)
-
-    })
-
-    test.afterEach(async({logoutpage})=>{
-        await logoutpage.logout()
-    })
-
 test("valid-emp-search",async({page})=>{
     test.slow()
     const ep = new EmployeeListPage(page)
@@ -52,7 +40,6 @@ test("view personal details",async({page})=>{
    
 })
 
-})
 
 
 

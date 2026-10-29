@@ -4,17 +4,8 @@ import AddEmployeePage from "../PageObjectModel/AddEmployeePage.js"
 import EmployeeListPage from "../PageObjectModel/EmployeeListPage.js"
 
 
-test.describe("e2e",()=>{
-    test.beforeEach(async({loginpage})=>{
-        await loginpage.navigate()
-        await loginpage.login(data.validuser.username,data.validuser.password)
-    })
 
-    test.afterEach(async({logoutpage})=>{
-        await logoutpage.logout()
-    })
-
-    test("system testing",async({page})=>{
+    test("system testing",async({page,loginpage})=>{
         await expect(page).toHaveURL(/dashboard/)
         const ap = new AddEmployeePage(page)
         const rndm = Math.round(Math.random()*((200-100)+100)+1)
@@ -23,5 +14,3 @@ test.describe("e2e",()=>{
         await ep.viewEmployeeDetails(id,data.firstname+rndm,data.lastname)
 
     })
-    
-})
